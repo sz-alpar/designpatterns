@@ -1,16 +1,15 @@
 package de.repeatuntil.designpatterns.creational.builder;
 
-import de.repeatuntil.designpatterns.creational.TestUtils;
-import de.repeatuntil.designpatterns.maze.*;
+import de.repeatuntil.designpatterns.maze.Maze;
 import org.junit.Test;
 
-import static de.repeatuntil.designpatterns.creational.TestUtils.*;
-import static org.junit.Assert.*;
+import static de.repeatuntil.designpatterns.creational.TestUtils.assertHasDefaultTypes;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 /**
  * Created by Alpar Szotyori on 2/24/17.
  */
-
 
 public class BuilderTest {
 

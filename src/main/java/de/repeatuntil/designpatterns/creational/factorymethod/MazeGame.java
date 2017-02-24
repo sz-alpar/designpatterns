@@ -1,6 +1,5 @@
 package de.repeatuntil.designpatterns.creational.factorymethod;
 
-import de.repeatuntil.designpatterns.creational.builder.MazeBuilder;
 import de.repeatuntil.designpatterns.maze.*;
 import org.jetbrains.annotations.NotNull;
 
@@ -43,12 +42,12 @@ public class MazeGame {
     }
 
     @NotNull
-    protected Wall makeWall() {
-        return new Wall();
+    protected Door makeDoor(@NotNull final Room roomFrom, @NotNull final Room roomTo) {
+        return new Door(roomFrom, roomTo);
     }
 
     @NotNull
-    protected Door makeDoor(@NotNull final Room roomFrom, @NotNull final Room roomTo) {
-        return new Door(roomFrom, roomTo);
+    protected Wall makeWall() {
+        return new Wall();
     }
 }

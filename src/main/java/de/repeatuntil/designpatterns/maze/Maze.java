@@ -12,13 +12,13 @@ public class Maze {
 
     private final Map<Integer, Room> rooms;
 
-    public Maze() {
-        this.rooms = new HashMap<>();
-    }
-
     public Maze(@NotNull final Maze other) {
         this();
         copyRooms(other);
+    }
+
+    public Maze() {
+        this.rooms = new HashMap<>();
     }
 
     private void copyRooms(@NotNull final Maze other) {

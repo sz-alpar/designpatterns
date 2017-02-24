@@ -13,7 +13,8 @@ public interface MazeBuilder {
 
     void buildRoom(final int roomNr);
 
-    void buildDoor(final int roomFrom, @NotNull final Direction fromSide, final int roomTo, @NotNull final Direction toSide);
+    void buildDoor(final int roomFrom, @NotNull final Direction fromSide, final int roomTo,
+                   @NotNull final Direction toSide);
 
     @NotNull
     Maze getMaze();

@@ -1,11 +1,9 @@
 package de.repeatuntil.designpatterns.creational.abstractfactory;
 
-import de.repeatuntil.designpatterns.creational.TestUtils;
-import de.repeatuntil.designpatterns.maze.*;
+import de.repeatuntil.designpatterns.maze.Maze;
 import org.junit.Test;
 
 import static de.repeatuntil.designpatterns.creational.TestUtils.*;
-import static org.junit.Assert.*;
 
 /**
  * Created by Alpar Szotyori on 1/5/17.

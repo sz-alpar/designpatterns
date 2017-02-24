@@ -3,7 +3,6 @@ package de.repeatuntil.designpatterns.creational.builder;
 import de.repeatuntil.designpatterns.maze.Direction;
 import de.repeatuntil.designpatterns.maze.Maze;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 /**
  * Created by Alpar Szotyori on 2/24/17.
@@ -24,7 +23,8 @@ public class CountingMazeBuilder implements MazeBuilder {
     }
 
     @Override
-    public void buildDoor(final int roomFrom, @NotNull final Direction fromSide, final int roomTo, @NotNull final Direction toSide) {
+    public void buildDoor(final int roomFrom, @NotNull final Direction fromSide, final int roomTo,
+                          @NotNull final Direction toSide) {
         doors++;
     }
 
@@ -39,6 +39,7 @@ public class CountingMazeBuilder implements MazeBuilder {
     }
 
     public class Counts {
+
         public final int rooms;
         public final int doors;
 

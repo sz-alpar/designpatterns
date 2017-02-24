@@ -1,16 +1,9 @@
 package de.repeatuntil.designpatterns.creational.factorymethod;
 
-import de.repeatuntil.designpatterns.creational.abstractfactory.BombedWall;
-import de.repeatuntil.designpatterns.creational.abstractfactory.DoorNeedingSpell;
-import de.repeatuntil.designpatterns.creational.abstractfactory.EnchantedRoom;
-import de.repeatuntil.designpatterns.creational.abstractfactory.RoomWithABomb;
-import de.repeatuntil.designpatterns.maze.*;
+import de.repeatuntil.designpatterns.maze.Maze;
 import org.junit.Test;
 
-import static de.repeatuntil.designpatterns.creational.TestUtils.assertHasBombedTypes;
-import static de.repeatuntil.designpatterns.creational.TestUtils.assertHasDefaultTypes;
-import static de.repeatuntil.designpatterns.creational.TestUtils.assertHasEnchantedTypes;
-import static org.junit.Assert.assertTrue;
+import static de.repeatuntil.designpatterns.creational.TestUtils.*;
 
 /**
  * Created by Alpar Szotyori on 2/24/17.

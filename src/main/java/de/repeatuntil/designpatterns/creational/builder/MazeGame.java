@@ -1,10 +1,7 @@
 package de.repeatuntil.designpatterns.creational.builder;
 
-import de.repeatuntil.designpatterns.creational.abstractfactory.MazeFactory;
 import de.repeatuntil.designpatterns.maze.Direction;
-import de.repeatuntil.designpatterns.maze.Door;
 import de.repeatuntil.designpatterns.maze.Maze;
-import de.repeatuntil.designpatterns.maze.Room;
 import org.jetbrains.annotations.NotNull;
 
 /**

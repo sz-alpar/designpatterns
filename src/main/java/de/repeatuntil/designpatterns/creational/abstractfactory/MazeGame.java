@@ -1,6 +1,9 @@
 package de.repeatuntil.designpatterns.creational.abstractfactory;
 
-import de.repeatuntil.designpatterns.maze.*;
+import de.repeatuntil.designpatterns.maze.Direction;
+import de.repeatuntil.designpatterns.maze.Door;
+import de.repeatuntil.designpatterns.maze.Maze;
+import de.repeatuntil.designpatterns.maze.Room;
 
 /**
  * Created by Alpar Szotyori on 1/5/17.

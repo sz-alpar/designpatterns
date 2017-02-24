@@ -45,7 +45,8 @@ public class StandardMazeBuilder implements MazeBuilder {
     }
 
     @Override
-    public void buildDoor(final int roomFrom, @NotNull Direction fromSide, final int roomTo, @NotNull Direction toSide) {
+    public void buildDoor(final int roomFrom, @NotNull Direction fromSide, final int roomTo,
+                          @NotNull Direction toSide) {
         Room r1 = currentMaze.getRoomWithNumber(roomFrom);
         Room r2 = currentMaze.getRoomWithNumber(roomTo);
         Door d = new Door(r1, r2);

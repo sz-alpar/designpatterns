@@ -10,21 +10,21 @@ import java.util.Map;
  */
 public class Room implements MapSite {
 
-    private int roomNumber;
     private final Map<Direction, MapSite> sides;
+    private int roomNumber;
 
     public Room() {
-        this.sides = new HashMap<>();
-    }
-
-    public Room(final int roomNumber) {
-        this.roomNumber = roomNumber;
         this.sides = new HashMap<>();
     }
 
     public Room(@NotNull final Room other) {
         this(other.roomNumber);
         copySides(other);
+    }
+
+    public Room(final int roomNumber) {
+        this.roomNumber = roomNumber;
+        this.sides = new HashMap<>();
     }
 
     private void copySides(final Room other) {

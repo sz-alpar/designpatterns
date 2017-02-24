@@ -15,13 +15,13 @@ public class EnchantedMazeFactory extends MazeFactory {
         return new EnchantedRoom(roomNumber, castSpell());
     }
 
+    protected Spell castSpell() {
+        return new Spell();
+    }
+
     @NotNull
     @Override
     public Door makeDoor(final Room r1, final Room r2) {
         return new DoorNeedingSpell(r1, r2);
-    }
-
-    protected Spell castSpell() {
-        return new Spell();
     }
 }
