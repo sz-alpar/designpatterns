@@ -1,8 +1,10 @@
 package de.repeatuntil.designpatterns.creational.builder;
 
+import de.repeatuntil.designpatterns.creational.TestUtils;
 import de.repeatuntil.designpatterns.maze.*;
 import org.junit.Test;
 
+import static de.repeatuntil.designpatterns.creational.TestUtils.*;
 import static org.junit.Assert.*;
 
 /**
@@ -17,20 +19,7 @@ public class BuilderTest {
         MazeGame mazeGame = new MazeGame();
         MazeBuilder standardMazeBuilder = new StandardMazeBuilder();
         Maze maze = mazeGame.createMaze(standardMazeBuilder);
-        assertIsStandardMaze(maze);
-    }
-
-    private void assertIsStandardMaze(Maze maze) {
-        assertNotNull(maze.getRoomWithNumber(1));
-        assertNotNull(maze.getRoomWithNumber(2));
-        assertTrue(maze.getRoomWithNumber(1).getSide(Direction.NORTH) instanceof Wall);
-        assertTrue(maze.getRoomWithNumber(1).getSide(Direction.EAST) instanceof Door);
-        assertTrue(maze.getRoomWithNumber(1).getSide(Direction.SOUTH) instanceof Wall);
-        assertTrue(maze.getRoomWithNumber(1).getSide(Direction.WEST) instanceof Wall);
-        assertTrue(maze.getRoomWithNumber(2).getSide(Direction.NORTH) instanceof Wall);
-        assertTrue(maze.getRoomWithNumber(2).getSide(Direction.EAST) instanceof Wall);
-        assertTrue(maze.getRoomWithNumber(2).getSide(Direction.SOUTH) instanceof Wall);
-        assertTrue(maze.getRoomWithNumber(2).getSide(Direction.WEST) instanceof Door);
+        assertHasDefaultTypes(maze);
     }
 
     @Test
