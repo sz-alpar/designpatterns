@@ -5,7 +5,7 @@ package de.repeatuntil.designpatterns.maze;
  */
 public class RoomNotFoundException extends RuntimeException {
 
-    public RoomNotFoundException(int roomNumber) {
+    public RoomNotFoundException(final int roomNumber) {
         super("Room nr " + roomNumber + " not found.");
     }
 }

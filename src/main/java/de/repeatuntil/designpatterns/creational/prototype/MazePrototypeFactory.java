@@ -41,16 +41,16 @@ public class MazePrototypeFactory extends MazeFactory {
 
     @NotNull
     @Override
-    public Room makeRoom(int roomNumber) {
-        Room room = (Room) prototypeRoom.copy();
+    public Room makeRoom(final int roomNumber) {
+        final Room room = (Room) prototypeRoom.copy();
         room.initialize(roomNumber);
         return room;
     }
 
     @NotNull
     @Override
-    public Door makeDoor(Room r1, Room r2) {
-        Door door = (Door) prototypeDoor.copy();
+    public Door makeDoor(final Room r1, final Room r2) {
+        final Door door = (Door) prototypeDoor.copy();
         door.initialize(r1, r2, false);
         return door;
     }

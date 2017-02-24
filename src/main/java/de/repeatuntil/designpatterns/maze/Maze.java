@@ -22,7 +22,7 @@ public class Maze {
     }
 
     private void copyRooms(@NotNull final Maze other) {
-        for (Map.Entry<Integer, Room> entry : other.rooms.entrySet()) {
+        for (final Map.Entry<Integer, Room> entry : other.rooms.entrySet()) {
             this.rooms.put(entry.getKey(), (Room) entry.getValue().copy());
         }
     }

@@ -9,11 +9,11 @@ import org.jetbrains.annotations.NotNull;
 public class MazeGame {
 
     public Maze createMaze() {
-        Maze maze = makeMaze();
+        final Maze maze = makeMaze();
 
-        Room r1 = makeRoom(1);
-        Room r2 = makeRoom(2);
-        Door theDoor = makeDoor(r1, r2);
+        final Room r1 = makeRoom(1);
+        final Room r2 = makeRoom(2);
+        final Door theDoor = makeDoor(r1, r2);
 
         maze.addRoom(r1);
         maze.addRoom(r2);

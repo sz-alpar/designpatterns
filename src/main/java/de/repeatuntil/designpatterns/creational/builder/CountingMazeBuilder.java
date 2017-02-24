@@ -43,7 +43,7 @@ public class CountingMazeBuilder implements MazeBuilder {
         public final int rooms;
         public final int doors;
 
-        public Counts(int rooms, int doors) {
+        public Counts(final int rooms, final int doors) {
             this.rooms = rooms;
             this.doors = doors;
         }

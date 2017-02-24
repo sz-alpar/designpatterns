@@ -28,7 +28,7 @@ public class Room implements MapSite {
     }
 
     private void copySides(final Room other) {
-        for (Map.Entry<Direction, MapSite> entry : other.sides.entrySet()) {
+        for (final Map.Entry<Direction, MapSite> entry : other.sides.entrySet()) {
             sides.put(entry.getKey(), entry.getValue().copy());
         }
     }

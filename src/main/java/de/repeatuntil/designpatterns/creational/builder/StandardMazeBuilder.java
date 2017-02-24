@@ -19,7 +19,7 @@ public class StandardMazeBuilder implements MazeBuilder {
     public void buildRoom(final int roomNr) {
         checkMazeInstance();
         if (roomNumberIsAvailable(roomNr)) {
-            Room room = new Room(roomNr);
+            final Room room = new Room(roomNr);
             currentMaze.addRoom(room);
 
             room.setSide(Direction.NORTH, new Wall());
@@ -35,21 +35,21 @@ public class StandardMazeBuilder implements MazeBuilder {
         }
     }
 
-    private boolean roomNumberIsAvailable(int roomNr) {
+    private boolean roomNumberIsAvailable(final int roomNr) {
         try {
             currentMaze.getRoomWithNumber(roomNr);
             return false;
-        } catch (RoomNotFoundException ignored) {
+        } catch (final RoomNotFoundException ignored) {
             return true;
         }
     }
 
     @Override
-    public void buildDoor(final int roomFrom, @NotNull Direction fromSide, final int roomTo,
-                          @NotNull Direction toSide) {
-        Room r1 = currentMaze.getRoomWithNumber(roomFrom);
-        Room r2 = currentMaze.getRoomWithNumber(roomTo);
-        Door d = new Door(r1, r2);
+    public void buildDoor(final int roomFrom, @NotNull final Direction fromSide, final int roomTo,
+                          @NotNull final Direction toSide) {
+        final Room r1 = currentMaze.getRoomWithNumber(roomFrom);
+        final Room r2 = currentMaze.getRoomWithNumber(roomTo);
+        final Door d = new Door(r1, r2);
 
         r1.setSide(fromSide, d);
         r2.setSide(toSide, d);

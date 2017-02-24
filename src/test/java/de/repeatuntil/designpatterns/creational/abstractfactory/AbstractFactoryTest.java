@@ -12,22 +12,22 @@ public class AbstractFactoryTest {
 
     @Test
     public void defaultMazeFactory() throws Exception {
-        MazeGame game = new MazeGame();
-        Maze maze = game.createMaze(new MazeFactory());
+        final MazeGame game = new MazeGame();
+        final Maze maze = game.createMaze(new MazeFactory());
         assertHasDefaultTypes(maze);
     }
 
     @Test
     public void enchantedMazeFactory() throws Exception {
-        MazeGame game = new MazeGame();
-        Maze maze = game.createMaze(new EnchantedMazeFactory());
+        final MazeGame game = new MazeGame();
+        final Maze maze = game.createMaze(new EnchantedMazeFactory());
         assertHasEnchantedTypes(maze);
     }
 
     @Test
     public void bombedMazeFactory() throws Exception {
-        MazeGame game = new MazeGame();
-        Maze maze = game.createMaze(new BombedMazeFactory());
+        final MazeGame game = new MazeGame();
+        final Maze maze = game.createMaze(new BombedMazeFactory());
         assertHasBombedTypes(maze);
     }
 

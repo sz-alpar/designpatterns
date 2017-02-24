@@ -11,15 +11,15 @@ public class MazeGameTest {
 
     @Test
     public void createMaze() throws Exception {
-        MazeGame game = new MazeGame();
-        Maze maze = game.createMaze();
+        final MazeGame game = new MazeGame();
+        final Maze maze = game.createMaze();
         assertIsCorrectMaze(maze);
     }
 
-    private void assertIsCorrectMaze(Maze maze) {
-        Room room1 = maze.getRoomWithNumber(1);
+    private void assertIsCorrectMaze(final Maze maze) {
+        final Room room1 = maze.getRoomWithNumber(1);
         assertNotNull(room1);
-        Room room2 = maze.getRoomWithNumber(2);
+        final Room room2 = maze.getRoomWithNumber(2);
         assertNotNull(room2);
         assertTrue(room1.getSide(Direction.NORTH) instanceof Wall);
         assertTrue(room1.getSide(Direction.EAST) instanceof Door);

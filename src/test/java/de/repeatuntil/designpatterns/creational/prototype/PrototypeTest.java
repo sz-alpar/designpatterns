@@ -16,29 +16,29 @@ public class PrototypeTest {
 
     @Test
     public void simpleMazeFactory() throws Exception {
-        MazeGame mazeGame = new MazeGame();
-        MazePrototypeFactory simpleMazeFactory = new MazePrototypeFactory(new Maze(), new Wall(), new Room(),
-                                                                          new Door());
-        Maze maze = mazeGame.createMaze(simpleMazeFactory);
+        final MazeGame mazeGame = new MazeGame();
+        final MazePrototypeFactory simpleMazeFactory = new MazePrototypeFactory(new Maze(), new Wall(), new Room(),
+                                                                                new Door());
+        final Maze maze = mazeGame.createMaze(simpleMazeFactory);
         assertHasDefaultTypes(maze);
     }
 
     @Test
     public void bombedMazeFactory() throws Exception {
-        MazeGame mazeGame = new MazeGame();
-        MazePrototypeFactory bombedMazeFactory = new MazePrototypeFactory(new Maze(), new BombedWall(),
-                                                                          new RoomWithABomb(), new Door());
-        Maze maze = mazeGame.createMaze(bombedMazeFactory);
+        final MazeGame mazeGame = new MazeGame();
+        final MazePrototypeFactory bombedMazeFactory = new MazePrototypeFactory(new Maze(), new BombedWall(),
+                                                                                new RoomWithABomb(), new Door());
+        final Maze maze = mazeGame.createMaze(bombedMazeFactory);
         assertHasBombedTypes(maze);
     }
 
     @Test
     public void enchantedMazeFactory() throws Exception {
-        MazeGame mazeGame = new MazeGame();
-        MazePrototypeFactory enchantedMazeFactory = new MazePrototypeFactory(new Maze(), new Wall(),
-                                                                             new EnchantedRoom(),
-                                                                             new DoorNeedingSpell());
-        Maze maze = mazeGame.createMaze(enchantedMazeFactory);
+        final MazeGame mazeGame = new MazeGame();
+        final MazePrototypeFactory enchantedMazeFactory = new MazePrototypeFactory(new Maze(), new Wall(),
+                                                                                   new EnchantedRoom(),
+                                                                                   new DoorNeedingSpell());
+        final Maze maze = mazeGame.createMaze(enchantedMazeFactory);
         assertHasEnchantedTypes(maze);
     }
 }

@@ -12,22 +12,22 @@ public class FactoryMethodTest {
 
     @Test
     public void defaultMazeGame() throws Exception {
-        MazeGame mazeGame = new MazeGame();
-        Maze maze = mazeGame.createMaze();
+        final MazeGame mazeGame = new MazeGame();
+        final Maze maze = mazeGame.createMaze();
         assertHasDefaultTypes(maze);
     }
 
     @Test
     public void bombedMazeGame() throws Exception {
-        MazeGame mazeGame = new BombedMazeGame();
-        Maze maze = mazeGame.createMaze();
+        final MazeGame mazeGame = new BombedMazeGame();
+        final Maze maze = mazeGame.createMaze();
         assertHasBombedTypes(maze);
     }
 
     @Test
     public void enchantedMazeGame() throws Exception {
-        MazeGame mazeGame = new EnchantedMazeGame();
-        Maze maze = mazeGame.createMaze();
+        final MazeGame mazeGame = new EnchantedMazeGame();
+        final Maze maze = mazeGame.createMaze();
         assertHasEnchantedTypes(maze);
     }
 

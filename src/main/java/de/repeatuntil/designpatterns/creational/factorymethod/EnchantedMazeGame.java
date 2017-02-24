@@ -24,7 +24,7 @@ public class EnchantedMazeGame extends MazeGame {
 
     @NotNull
     @Override
-    protected Door makeDoor(@NotNull Room roomFrom, @NotNull Room roomTo) {
+    protected Door makeDoor(@NotNull final Room roomFrom, @NotNull final Room roomTo) {
         return new DoorNeedingSpell(roomFrom, roomTo);
     }
 }
