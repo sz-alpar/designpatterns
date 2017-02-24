@@ -15,6 +15,7 @@ public interface MazeBuilder {
 
     void buildDoor(final int roomFrom, @NotNull final Direction fromSide, final int roomTo, @NotNull final Direction toSide);
 
+    @NotNull
     Maze getMaze();
 
 }

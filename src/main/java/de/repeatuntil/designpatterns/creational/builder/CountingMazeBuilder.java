@@ -28,7 +28,7 @@ public class CountingMazeBuilder implements MazeBuilder {
         doors++;
     }
 
-    @Nullable
+    @NotNull
     @Override
     public Maze getMaze() {
         return null;

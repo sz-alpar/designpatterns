@@ -54,6 +54,7 @@ public class StandardMazeBuilder implements MazeBuilder {
         r2.setSide(toSide, d);
     }
 
+    @NotNull
     @Override
     public Maze getMaze() {
         return currentMaze;
