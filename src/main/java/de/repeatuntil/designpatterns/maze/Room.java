@@ -10,12 +10,31 @@ import java.util.Map;
  */
 public class Room implements MapSite {
 
-    private final int roomNumber;
+    private int roomNumber;
     private final Map<Direction, MapSite> sides;
+
+    public Room() {
+        this.sides = new HashMap<>();
+    }
 
     public Room(final int roomNumber) {
         this.roomNumber = roomNumber;
         this.sides = new HashMap<>();
+    }
+
+    public Room(@NotNull final Room other) {
+        this(other.roomNumber);
+        copySides(other);
+    }
+
+    private void copySides(final Room other) {
+        for (Map.Entry<Direction, MapSite> entry : other.sides.entrySet()) {
+            sides.put(entry.getKey(), entry.getValue().copy());
+        }
+    }
+
+    public void initialize(final int roomNumber) {
+        this.roomNumber = roomNumber;
     }
 
     public int getRoomNumber() {
@@ -38,6 +57,12 @@ public class Room implements MapSite {
     @Override
     public void enter() {
 
+    }
+
+    @NotNull
+    @Override
+    public MapSite copy() {
+        return new Room(this);
     }
 
 }

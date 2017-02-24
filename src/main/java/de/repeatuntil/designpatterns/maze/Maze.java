@@ -16,6 +16,17 @@ public class Maze {
         this.rooms = new HashMap<>();
     }
 
+    public Maze(@NotNull final Maze other) {
+        this();
+        copyRooms(other);
+    }
+
+    private void copyRooms(@NotNull final Maze other) {
+        for (Map.Entry<Integer, Room> entry : other.rooms.entrySet()) {
+            this.rooms.put(entry.getKey(), (Room) entry.getValue().copy());
+        }
+    }
+
     public void addRoom(@NotNull final Room room) {
         this.rooms.put(room.getRoomNumber(), room);
     }
@@ -27,5 +38,13 @@ public class Maze {
             throw new RoomNotFoundException(roomNumber);
         }
         return room;
+    }
+
+    protected Map<Integer, Room> getRooms() {
+        return rooms;
+    }
+
+    public Maze copy() {
+        return new Maze(this);
     }
 }
