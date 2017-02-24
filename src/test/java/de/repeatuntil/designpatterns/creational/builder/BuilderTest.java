@@ -26,7 +26,6 @@ public class BuilderTest {
         MazeGame mazeGame = new MazeGame();
         CountingMazeBuilder countingMazeBuilder = new CountingMazeBuilder();
         Maze maze = mazeGame.createMaze(countingMazeBuilder);
-        assertNull(maze);
         assertEquals(2, countingMazeBuilder.getCounts().rooms);
         assertEquals(1, countingMazeBuilder.getCounts().doors);
     }

@@ -31,7 +31,7 @@ public class CountingMazeBuilder implements MazeBuilder {
     @NotNull
     @Override
     public Maze getMaze() {
-        return null;
+        return new Maze();
     }
 
     public Counts getCounts() {
