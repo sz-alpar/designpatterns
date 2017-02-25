@@ -7,7 +7,7 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Created by Alpar Szotyori on 1/5/17.
  */
-public class RoomWithABomb extends Room {
+public final class RoomWithABomb extends Room {
 
     public RoomWithABomb() {
         super();
@@ -17,7 +17,7 @@ public class RoomWithABomb extends Room {
         super(roomNumber);
     }
 
-    public RoomWithABomb(@NotNull final RoomWithABomb roomWithABomb) {
+    private RoomWithABomb(@NotNull final RoomWithABomb roomWithABomb) {
         super(roomWithABomb);
     }
 

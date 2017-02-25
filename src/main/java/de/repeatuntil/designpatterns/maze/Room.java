@@ -17,7 +17,7 @@ public class Room implements MapSite {
         this.sides = new HashMap<>();
     }
 
-    public Room(@NotNull final Room other) {
+    protected Room(@NotNull final Room other) {
         this(other.roomNumber);
         copySides(other);
     }
@@ -33,16 +33,16 @@ public class Room implements MapSite {
         }
     }
 
-    public void initialize(final int roomNumber) {
+    public final void initialize(final int roomNumber) {
         this.roomNumber = roomNumber;
     }
 
-    public int getRoomNumber() {
+    public final int getRoomNumber() {
         return roomNumber;
     }
 
     @NotNull
-    public MapSite getSide(final Direction direction) {
+    public final MapSite getSide(final Direction direction) {
         final MapSite side = sides.get(direction);
         if (side == null) {
             throw new SideNotFoundException(this, direction);
@@ -50,7 +50,7 @@ public class Room implements MapSite {
         return side;
     }
 
-    public void setSide(final Direction direction, final MapSite site) {
+    public final void setSide(final Direction direction, final MapSite site) {
         sides.put(direction, site);
     }
 

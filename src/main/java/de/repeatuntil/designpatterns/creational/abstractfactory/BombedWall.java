@@ -7,7 +7,7 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Created by Alpar Szotyori on 1/5/17.
  */
-public class BombedWall extends Wall {
+public final class BombedWall extends Wall {
 
     @NotNull
     @Override

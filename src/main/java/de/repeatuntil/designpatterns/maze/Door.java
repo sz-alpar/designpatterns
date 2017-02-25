@@ -19,7 +19,7 @@ public class Door implements MapSite {
         this.room2 = room2;
     }
 
-    public Door(@NotNull final Door other) {
+    protected Door(@NotNull final Door other) {
         this.isOpen = other.isOpen;
         copyRooms(other);
     }
@@ -33,13 +33,13 @@ public class Door implements MapSite {
         }
     }
 
-    public void initialize(@NotNull final Room room1, @NotNull final Room room2, final boolean isOpen) {
+    public final void initialize(@NotNull final Room room1, @NotNull final Room room2, final boolean isOpen) {
         this.room1 = room1;
         this.room2 = room2;
         this.isOpen = isOpen;
     }
 
-    public Room otherSideFrom(@NotNull final Room room) {
+    public final Room otherSideFrom(@NotNull final Room room) {
         if (room.getRoomNumber() == room1.getRoomNumber()) {
             return room2;
         }

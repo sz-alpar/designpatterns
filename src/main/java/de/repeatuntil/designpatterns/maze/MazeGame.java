@@ -3,7 +3,7 @@ package de.repeatuntil.designpatterns.maze;
 /**
  * Created by Alpar Szotyori on 1/5/17.
  */
-public class MazeGame {
+final class MazeGame {
 
     public Maze createMaze() {
         final Maze maze = new Maze();

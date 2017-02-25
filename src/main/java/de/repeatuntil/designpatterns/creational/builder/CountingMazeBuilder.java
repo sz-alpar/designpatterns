@@ -7,7 +7,7 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Created by Alpar Szotyori on 2/24/17.
  */
-public class CountingMazeBuilder implements MazeBuilder {
+public final class CountingMazeBuilder implements MazeBuilder {
 
     private int doors;
     private int rooms;
@@ -38,7 +38,7 @@ public class CountingMazeBuilder implements MazeBuilder {
         return new Counts(rooms, doors);
     }
 
-    public class Counts {
+    public static final class Counts {
 
         public final int rooms;
         public final int doors;

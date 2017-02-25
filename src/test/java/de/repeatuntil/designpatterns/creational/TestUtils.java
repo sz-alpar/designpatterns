@@ -17,6 +17,7 @@ public final class TestUtils {
     private TestUtils() {
     }
 
+    @SuppressWarnings("ConstantConditions")
     public static void assertHasDefaultTypes(@NotNull final Maze maze) {
         assertTrue(maze.getRoomWithNumber(1) instanceof Room);
         assertTrue(maze.getRoomWithNumber(2) instanceof Room);

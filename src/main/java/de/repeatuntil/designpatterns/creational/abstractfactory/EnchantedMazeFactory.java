@@ -7,7 +7,7 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Created by Alpar Szotyori on 1/5/17.
  */
-public class EnchantedMazeFactory extends MazeFactory {
+public final class EnchantedMazeFactory extends MazeFactory {
 
     @NotNull
     @Override
@@ -15,7 +15,7 @@ public class EnchantedMazeFactory extends MazeFactory {
         return new EnchantedRoom(roomNumber, castSpell());
     }
 
-    protected Spell castSpell() {
+    private Spell castSpell() {
         return new Spell();
     }
 

@@ -8,7 +8,7 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Created by Alpar Szotyori on 1/5/17.
  */
-public class DoorNeedingSpell extends Door {
+public final class DoorNeedingSpell extends Door {
 
     public DoorNeedingSpell() {
     }
@@ -17,7 +17,7 @@ public class DoorNeedingSpell extends Door {
         super(room1, room2);
     }
 
-    public DoorNeedingSpell(@NotNull final DoorNeedingSpell other) {
+    private DoorNeedingSpell(@NotNull final DoorNeedingSpell other) {
         super(other);
     }
 

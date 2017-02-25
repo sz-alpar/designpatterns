@@ -6,7 +6,7 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Created by Alpar Szotyori on 2/24/17.
  */
-public class StandardMazeBuilder implements MazeBuilder {
+public final class StandardMazeBuilder implements MazeBuilder {
 
     private Maze currentMaze;
 
@@ -17,8 +17,8 @@ public class StandardMazeBuilder implements MazeBuilder {
 
     @Override
     public void buildRoom(final int roomNr) {
-        checkMazeInstance();
-        if (roomNumberIsAvailable(roomNr)) {
+        throwIfNoMazeInstance();
+        if (isRoomNumberAvailable(roomNr)) {
             final Room room = new Room(roomNr);
             currentMaze.addRoom(room);
 
@@ -29,13 +29,13 @@ public class StandardMazeBuilder implements MazeBuilder {
         }
     }
 
-    private void checkMazeInstance() {
+    private void throwIfNoMazeInstance() {
         if (currentMaze == null) {
             throw new MazeNotCreatedException();
         }
     }
 
-    private boolean roomNumberIsAvailable(final int roomNr) {
+    private boolean isRoomNumberAvailable(final int roomNr) {
         try {
             currentMaze.getRoomWithNumber(roomNr);
             return false;
@@ -49,10 +49,10 @@ public class StandardMazeBuilder implements MazeBuilder {
                           @NotNull final Direction toSide) {
         final Room r1 = currentMaze.getRoomWithNumber(roomFrom);
         final Room r2 = currentMaze.getRoomWithNumber(roomTo);
-        final Door d = new Door(r1, r2);
+        final Door door = new Door(r1, r2);
 
-        r1.setSide(fromSide, d);
-        r2.setSide(toSide, d);
+        r1.setSide(fromSide, door);
+        r2.setSide(toSide, door);
     }
 
     @NotNull

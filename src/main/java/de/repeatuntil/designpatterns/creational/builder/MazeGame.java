@@ -7,7 +7,7 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Created by Alpar Szotyori on 1/5/17.
  */
-public class MazeGame {
+final class MazeGame {
 
     public Maze createMaze(@NotNull final MazeBuilder builder) {
         builder.buildMaze();

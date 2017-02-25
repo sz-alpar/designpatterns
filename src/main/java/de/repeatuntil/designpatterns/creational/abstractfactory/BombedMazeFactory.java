@@ -7,7 +7,7 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Created by Alpar Szotyori on 1/5/17.
  */
-public class BombedMazeFactory extends MazeFactory {
+public final class BombedMazeFactory extends MazeFactory {
 
     @NotNull
     @Override

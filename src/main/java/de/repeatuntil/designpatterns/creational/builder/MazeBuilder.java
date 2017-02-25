@@ -7,7 +7,7 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Created by Alpar Szotyori on 2/24/17.
  */
-public interface MazeBuilder {
+interface MazeBuilder {
 
     void buildMaze();
 

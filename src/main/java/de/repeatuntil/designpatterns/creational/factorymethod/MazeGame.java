@@ -6,9 +6,9 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Created by Alpar Szotyori on 1/5/17.
  */
-public class MazeGame {
+class MazeGame {
 
-    public Maze createMaze() {
+    public final Maze createMaze() {
         final Maze maze = makeMaze();
 
         final Room r1 = makeRoom(1);
@@ -32,22 +32,19 @@ public class MazeGame {
     }
 
     @NotNull
-    protected Maze makeMaze() {
+    private Maze makeMaze() {
         return new Maze();
     }
 
-    @NotNull
-    protected Room makeRoom(final int roomNr) {
+    @NotNull Room makeRoom(final int roomNr) {
         return new Room(roomNr);
     }
 
-    @NotNull
-    protected Door makeDoor(@NotNull final Room roomFrom, @NotNull final Room roomTo) {
+    @NotNull Door makeDoor(@NotNull final Room roomFrom, @NotNull final Room roomTo) {
         return new Door(roomFrom, roomTo);
     }
 
-    @NotNull
-    protected Wall makeWall() {
+    @NotNull Wall makeWall() {
         return new Wall();
     }
 }

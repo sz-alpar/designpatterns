@@ -7,7 +7,7 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Created by Alpar Szotyori on 1/5/17.
  */
-public class EnchantedRoom extends Room {
+public final class EnchantedRoom extends Room {
 
     private final Spell spell;
 
@@ -20,7 +20,7 @@ public class EnchantedRoom extends Room {
         this.spell = spell;
     }
 
-    public EnchantedRoom(@NotNull final EnchantedRoom other) {
+    private EnchantedRoom(@NotNull final EnchantedRoom other) {
         super(other);
         this.spell = other.spell;
     }

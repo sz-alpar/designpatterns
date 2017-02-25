@@ -8,9 +8,9 @@ import de.repeatuntil.designpatterns.maze.Room;
 /**
  * Created by Alpar Szotyori on 1/5/17.
  */
-public class MazeGame {
+public final class MazeGame {
 
-    public Maze createMaze(MazeFactory factory) {
+    public Maze createMaze(final MazeFactory factory) {
         final Maze maze = factory.makeMaze();
         final Room r1 = factory.makeRoom(1);
         final Room r2 = factory.makeRoom(2);

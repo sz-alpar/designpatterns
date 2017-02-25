@@ -10,7 +10,7 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Created by Alpar Szotyori on 2/24/17.
  */
-public class MazePrototypeFactory extends MazeFactory {
+public final class MazePrototypeFactory extends MazeFactory {
 
     private final Maze prototypeMaze;
     private final Room prototypeRoom;

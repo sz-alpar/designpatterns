@@ -8,11 +8,11 @@ import java.util.Map;
 /**
  * Created by Alpar Szotyori on 1/5/17.
  */
-public class Maze {
+public final class Maze {
 
     private final Map<Integer, Room> rooms;
 
-    public Maze(@NotNull final Maze other) {
+    private Maze(@NotNull final Maze other) {
         this();
         copyRooms(other);
     }
@@ -40,7 +40,8 @@ public class Maze {
         return room;
     }
 
-    protected Map<Integer, Room> getRooms() {
+    @SuppressWarnings("unused")
+    Map<Integer, Room> getRooms() {
         return rooms;
     }
 

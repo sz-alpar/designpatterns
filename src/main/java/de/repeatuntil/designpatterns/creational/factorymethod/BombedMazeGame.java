@@ -9,7 +9,7 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Created by Alpar Szotyori on 2/24/17.
  */
-public class BombedMazeGame extends MazeGame {
+final class BombedMazeGame extends MazeGame {
 
     @NotNull
     @Override
