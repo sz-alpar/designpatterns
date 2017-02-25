@@ -49,7 +49,7 @@ public final class MazePrototypeFactory extends MazeFactory {
 
     @NotNull
     @Override
-    public Door makeDoor(final Room r1, final Room r2) {
+    public Door makeDoor(@NotNull final Room r1, @NotNull final Room r2) {
         final Door door = (Door) prototypeDoor.copy();
         door.initialize(r1, r2, false);
         return door;

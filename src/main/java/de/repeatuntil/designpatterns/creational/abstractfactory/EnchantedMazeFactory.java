@@ -21,7 +21,7 @@ public final class EnchantedMazeFactory extends MazeFactory {
 
     @NotNull
     @Override
-    public Door makeDoor(final Room r1, final Room r2) {
+    public Door makeDoor(@NotNull final Room r1, @NotNull final Room r2) {
         return new DoorNeedingSpell(r1, r2);
     }
 }

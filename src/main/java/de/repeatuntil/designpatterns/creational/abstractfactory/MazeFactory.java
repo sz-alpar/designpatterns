@@ -27,7 +27,7 @@ public class MazeFactory {
     }
 
     @NotNull
-    public Door makeDoor(final Room r1, final Room r2) {
+    public Door makeDoor(@NotNull final Room r1, @NotNull final Room r2) {
         return new Door(r1, r2);
     }
 }
