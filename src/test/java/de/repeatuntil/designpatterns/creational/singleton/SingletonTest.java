@@ -43,6 +43,36 @@ public class SingletonTest {
     }
 
     @Test
+    public void singletonMazeFactoryEnum() throws Exception {
+        final MazeFactorySingletonEnum singletonInstance1 = MazeFactorySingletonEnum.INSTANCE;
+        final MazeFactorySingletonEnum singletonInstance2 = MazeFactorySingletonEnum.INSTANCE;
+        assertSame(singletonInstance1, singletonInstance2);
+    }
+
+    @Test
+    public void singletonMazeFactoryDoubleCheckedLocking() throws Exception {
+        final MazeFactorySingletonDoubleCheckedLocking singletonInstance1 = MazeFactorySingletonDoubleCheckedLocking
+                .getInstance();
+        final MazeFactorySingletonDoubleCheckedLocking singletonInstance2 = MazeFactorySingletonDoubleCheckedLocking
+                .getInstance();
+        assertSame(singletonInstance1, singletonInstance2);
+    }
+
+    @Test
+    public void singletonMazeFactoryInitOnDemand() throws Exception {
+        final MazeFactorySingletonInitOnDemand singletonInstance1 = MazeFactorySingletonInitOnDemand.getInstance();
+        final MazeFactorySingletonInitOnDemand singletonInstance2 = MazeFactorySingletonInitOnDemand.getInstance();
+        assertSame(singletonInstance1, singletonInstance2);
+    }
+
+    @Test
+    public void singletonMazeFactoryStaticInit() throws Exception {
+        final MazeFactorySingletonStaticInit singletonInstance1 = MazeFactorySingletonStaticInit.getInstance();
+        final MazeFactorySingletonStaticInit singletonInstance2 = MazeFactorySingletonStaticInit.getInstance();
+        assertSame(singletonInstance1, singletonInstance2);
+    }
+
+    @Test
     public void defaultMazeFactorySubclassing() throws Exception {
         System.setProperty("maze.style", "");
         final MazeGame game = new MazeGame();
