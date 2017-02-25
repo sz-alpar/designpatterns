@@ -7,11 +7,6 @@
         <option value="organizeImports" />
         <option value="reformat" />
         <option value="rearrange" />
-        <option value="localCanBeFinal" />
-        <option value="fieldCanBeFinal" />
-        <option value="explicitTypeCanBeDiamond" />
-        <option value="unnecessarySemicolon" />
-        <option value="missingOverrideAnnotation" />
       </set>
     </option>
   </component>
