@@ -13,24 +13,24 @@ public class TextView {
     private Size extent = Size.ZERO;
 
     @NotNull
-    public Point getOrigin() {
+    public final Point getOrigin() {
         return origin;
     }
 
-    public void setOrigin(final Point origin) {
+    public final void setOrigin(final Point origin) {
         this.origin = origin;
     }
 
     @NotNull
-    public Size getExtent() {
+    public final Size getExtent() {
         return extent;
     }
 
-    public void setExtent(final Size extent) {
+    public final void setExtent(final Size extent) {
         this.extent = extent;
     }
 
-    public boolean isEmpty() {
+    public final boolean isEmpty() {
         return extent.equals(Size.ZERO);
     }
 }

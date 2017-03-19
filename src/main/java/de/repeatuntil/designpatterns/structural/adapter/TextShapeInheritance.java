@@ -8,7 +8,7 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Created by aszotyori on 19/03/2017.
  */
-public class TextShapeInheritance extends TextView implements TextShape {
+public final class TextShapeInheritance extends TextView implements TextShape {
 
     @NotNull
     @Override

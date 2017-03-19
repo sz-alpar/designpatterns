@@ -8,7 +8,7 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Created by aszotyori on 19/03/2017.
  */
-public class TextShapeComposition implements TextShape {
+public final class TextShapeComposition implements TextShape {
 
     private final TextView textView;
 

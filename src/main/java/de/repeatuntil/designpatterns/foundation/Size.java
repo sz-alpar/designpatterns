@@ -3,7 +3,7 @@ package de.repeatuntil.designpatterns.foundation;
 /**
  * Created by aszotyori on 19/03/2017.
  */
-public class Size {
+public final class Size {
 
     public static final Size ZERO = new Size(0, 0);
 

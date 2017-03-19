@@ -1,12 +1,11 @@
 package de.repeatuntil.designpatterns.foundation;
 
-import org.jetbrains.annotations.NonNls;
 import org.jetbrains.annotations.NotNull;
 
 /**
  * Created by aszotyori on 19/03/2017.
  */
-public class BoundingBox {
+public final class BoundingBox {
 
     private final Point bottomLeft;
     private final Point topRight;

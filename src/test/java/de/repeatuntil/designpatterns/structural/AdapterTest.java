@@ -4,7 +4,6 @@ import de.repeatuntil.designpatterns.foundation.BoundingBox;
 import de.repeatuntil.designpatterns.foundation.Point;
 import de.repeatuntil.designpatterns.foundation.Size;
 import de.repeatuntil.designpatterns.structural.adapter.*;
-import junit.framework.TestCase;
 import org.jetbrains.annotations.NotNull;
 import org.junit.Test;
 

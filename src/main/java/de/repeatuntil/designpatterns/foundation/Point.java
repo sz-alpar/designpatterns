@@ -3,7 +3,7 @@ package de.repeatuntil.designpatterns.foundation;
 /**
  * Created by aszotyori on 19/03/2017.
  */
-public class Point {
+public final class Point {
 
     public static final Point ZERO = new Point(0, 0);
 
