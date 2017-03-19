@@ -5,7 +5,7 @@ package de.repeatuntil.designpatterns.foundation;
  */
 public class Size {
 
-    public static final Size ZERO = new Size(0,0);
+    public static final Size ZERO = new Size(0, 0);
 
     private final float width;
     private final float height;
