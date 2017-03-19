@@ -23,12 +23,12 @@ public class AdapterTest {
         assertAdapterConformsToShape(adapter, adapter);
     }
 
-    private void configureTextView(final TextView textView) {
+    private void configureTextView(@NotNull final TextView textView) {
         textView.setExtent(new Size(200, 50));
         textView.setOrigin(new Point(10, 30));
     }
 
-    private void assertAdapterConformsToShape(final TextShape adapter, final TextView textView) {
+    private void assertAdapterConformsToShape(@NotNull final TextShape adapter, @NotNull final TextView textView) {
         assertFalse(adapter.isEmpty());
 
         //noinspection UnnecessaryLocalVariable
@@ -44,7 +44,7 @@ public class AdapterTest {
     }
 
     @NotNull
-    private BoundingBox createBoundingBox(final Point bottomLeft, final Size size) {
+    private BoundingBox createBoundingBox(@NotNull final Point bottomLeft, @NotNull final Size size) {
         final Point topRight = new Point(bottomLeft.getX() + size.getWidth(),
                                          bottomLeft.getY() + size.getHeight());
         return new BoundingBox(bottomLeft, topRight);

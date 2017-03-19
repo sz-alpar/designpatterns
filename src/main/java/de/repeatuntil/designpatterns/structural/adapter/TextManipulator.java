@@ -1,11 +1,13 @@
 package de.repeatuntil.designpatterns.structural.adapter;
 
+import org.jetbrains.annotations.NotNull;
+
 /**
  * Created by aszotyori on 19/03/2017.
  */
 public class TextManipulator extends Manipulator {
 
-    public TextManipulator(final TextShape textShape) {
+    public TextManipulator(@NotNull final TextShape textShape) {
         super(textShape);
     }
 }

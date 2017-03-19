@@ -3,6 +3,7 @@ package de.repeatuntil.designpatterns.structural.adapter;
 import de.repeatuntil.designpatterns.foundation.BoundingBox;
 import de.repeatuntil.designpatterns.foundation.Point;
 import de.repeatuntil.designpatterns.foundation.Size;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * Created by aszotyori on 19/03/2017.
@@ -11,10 +12,11 @@ public class TextShapeComposition implements TextShape {
 
     private final TextView textView;
 
-    public TextShapeComposition(final TextView textView) {
+    public TextShapeComposition(@NotNull final TextView textView) {
         this.textView = textView;
     }
 
+    @NotNull
     @Override
     public BoundingBox getBoundingBox() {
         final Point bottomLeft = textView.getOrigin();
@@ -24,13 +26,14 @@ public class TextShapeComposition implements TextShape {
     }
 
     @Override
-    public void setBoundingBox(final BoundingBox boundingBox) {
+    public void setBoundingBox(@NotNull final BoundingBox boundingBox) {
         textView.setOrigin(boundingBox.getBottomLeft());
         final Size extent = new Size(boundingBox.getTopRight().getX() - boundingBox.getBottomLeft().getX(),
                                      boundingBox.getTopRight().getY() - boundingBox.getBottomLeft().getY());
         textView.setExtent(extent);
     }
 
+    @NotNull
     @Override
     public Manipulator createManipulator() {
         return new TextManipulator(this);
