@@ -1,7 +1,8 @@
 package de.repeatuntil.designpatterns.creational.singleton;
 
-import de.repeatuntil.designpatterns.creational.abstractfactory.MazeFactory;
 import org.jetbrains.annotations.NotNull;
+
+import de.repeatuntil.designpatterns.creational.abstractfactory.MazeFactory;
 
 /**
  * Created by Alpar Szotyori on 2/25/17.

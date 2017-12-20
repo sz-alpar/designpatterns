@@ -1,14 +1,20 @@
 package de.repeatuntil.designpatterns.structural;
 
-import de.repeatuntil.designpatterns.foundation.BoundingBox;
-import de.repeatuntil.designpatterns.foundation.Point;
-import de.repeatuntil.designpatterns.foundation.Size;
-import de.repeatuntil.designpatterns.structural.adapter.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+
 import org.jetbrains.annotations.NotNull;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
+import de.repeatuntil.designpatterns.foundation.BoundingBox;
+import de.repeatuntil.designpatterns.foundation.Point;
+import de.repeatuntil.designpatterns.foundation.Size;
+import de.repeatuntil.designpatterns.structural.adapter.Manipulator;
+import de.repeatuntil.designpatterns.structural.adapter.Shape;
+import de.repeatuntil.designpatterns.structural.adapter.TextShape;
+import de.repeatuntil.designpatterns.structural.adapter.TextShapeComposition;
+import de.repeatuntil.designpatterns.structural.adapter.TextShapeInheritance;
+import de.repeatuntil.designpatterns.structural.adapter.TextView;
 
 /**
  * Created by aszotyori on 19/03/2017.
@@ -27,12 +33,14 @@ public class AdapterTest {
         textView.setOrigin(new Point(10, 30));
     }
 
-    private void assertAdapterConformsToShape(@NotNull final TextShape adapter, @NotNull final TextView textView) {
+    private void assertAdapterConformsToShape(@NotNull final TextShape adapter,
+            @NotNull final TextView textView) {
         assertFalse(adapter.isEmpty());
 
         //noinspection UnnecessaryLocalVariable
         final Shape shape = adapter;
-        BoundingBox expectedBoundingBox = createBoundingBox(textView.getOrigin(), textView.getExtent());
+        BoundingBox expectedBoundingBox =
+                createBoundingBox(textView.getOrigin(), textView.getExtent());
         assertEquals(expectedBoundingBox, shape.getBoundingBox());
 
         final Manipulator manipulator = shape.createManipulator();
@@ -43,9 +51,10 @@ public class AdapterTest {
     }
 
     @NotNull
-    private BoundingBox createBoundingBox(@NotNull final Point bottomLeft, @NotNull final Size size) {
+    private BoundingBox createBoundingBox(@NotNull final Point bottomLeft,
+            @NotNull final Size size) {
         final Point topRight = new Point(bottomLeft.getX() + size.getWidth(),
-                                         bottomLeft.getY() + size.getHeight());
+                bottomLeft.getY() + size.getHeight());
         return new BoundingBox(bottomLeft, topRight);
     }
 

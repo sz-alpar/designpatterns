@@ -15,12 +15,11 @@ public final class Point {
         this.y = y;
     }
 
-    public float getX() {
-        return x;
-    }
-
-    public float getY() {
-        return y;
+    @Override
+    public int hashCode() {
+        int result = (x != +0.0f ? Float.floatToIntBits(x) : 0);
+        result = 31 * result + (y != +0.0f ? Float.floatToIntBits(y) : 0);
+        return result;
     }
 
     @Override
@@ -40,10 +39,11 @@ public final class Point {
         return Float.compare(point.y, y) == 0;
     }
 
-    @Override
-    public int hashCode() {
-        int result = (x != +0.0f ? Float.floatToIntBits(x) : 0);
-        result = 31 * result + (y != +0.0f ? Float.floatToIntBits(y) : 0);
-        return result;
+    public float getX() {
+        return x;
+    }
+
+    public float getY() {
+        return y;
     }
 }

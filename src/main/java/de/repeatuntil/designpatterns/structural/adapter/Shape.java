@@ -1,7 +1,8 @@
 package de.repeatuntil.designpatterns.structural.adapter;
 
-import de.repeatuntil.designpatterns.foundation.BoundingBox;
 import org.jetbrains.annotations.NotNull;
+
+import de.repeatuntil.designpatterns.foundation.BoundingBox;
 
 /**
  * Created by aszotyori on 19/03/2017.
@@ -9,10 +10,10 @@ import org.jetbrains.annotations.NotNull;
 public interface Shape {
 
     @NotNull
+    Manipulator createManipulator();
+
+    @NotNull
     BoundingBox getBoundingBox();
 
     void setBoundingBox(@NotNull BoundingBox boundingBox);
-
-    @NotNull
-    Manipulator createManipulator();
 }

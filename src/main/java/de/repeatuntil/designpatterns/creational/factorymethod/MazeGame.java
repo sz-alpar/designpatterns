@@ -1,7 +1,12 @@
 package de.repeatuntil.designpatterns.creational.factorymethod;
 
-import de.repeatuntil.designpatterns.maze.*;
 import org.jetbrains.annotations.NotNull;
+
+import de.repeatuntil.designpatterns.maze.Direction;
+import de.repeatuntil.designpatterns.maze.Door;
+import de.repeatuntil.designpatterns.maze.Maze;
+import de.repeatuntil.designpatterns.maze.Room;
+import de.repeatuntil.designpatterns.maze.Wall;
 
 /**
  * Created by Alpar Szotyori on 1/5/17.
@@ -36,15 +41,18 @@ class MazeGame {
         return new Maze();
     }
 
-    @NotNull Room makeRoom(final int roomNr) {
+    @NotNull
+    Room makeRoom(final int roomNr) {
         return new Room(roomNr);
     }
 
-    @NotNull Door makeDoor(@NotNull final Room roomFrom, @NotNull final Room roomTo) {
+    @NotNull
+    Door makeDoor(@NotNull final Room roomFrom, @NotNull final Room roomTo) {
         return new Door(roomFrom, roomTo);
     }
 
-    @NotNull Wall makeWall() {
+    @NotNull
+    Wall makeWall() {
         return new Wall();
     }
 }

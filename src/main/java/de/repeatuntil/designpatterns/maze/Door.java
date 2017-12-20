@@ -7,9 +7,9 @@ import org.jetbrains.annotations.NotNull;
  */
 public class Door implements MapSite {
 
+    private boolean isOpen;
     private Room room1;
     private Room room2;
-    private boolean isOpen;
 
     public Door() {
     }
@@ -33,7 +33,19 @@ public class Door implements MapSite {
         }
     }
 
-    public final void initialize(@NotNull final Room room1, @NotNull final Room room2, final boolean isOpen) {
+    @NotNull
+    @Override
+    public MapSite copy() {
+        return new Door(this);
+    }
+
+    @Override
+    public void enter() {
+
+    }
+
+    public final void initialize(@NotNull final Room room1, @NotNull final Room room2,
+            final boolean isOpen) {
         this.room1 = room1;
         this.room2 = room2;
         this.isOpen = isOpen;
@@ -47,16 +59,5 @@ public class Door implements MapSite {
             return room1;
         }
         throw new RoomNotFoundException(room.getRoomNumber());
-    }
-
-    @Override
-    public void enter() {
-
-    }
-
-    @NotNull
-    @Override
-    public MapSite copy() {
-        return new Door(this);
     }
 }

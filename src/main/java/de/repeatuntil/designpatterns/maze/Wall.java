@@ -7,14 +7,14 @@ import org.jetbrains.annotations.NotNull;
  */
 public class Wall implements MapSite {
 
-    @Override
-    public void enter() {
-
-    }
-
     @NotNull
     @Override
     public MapSite copy() {
         return new Wall();
+    }
+
+    @Override
+    public void enter() {
+
     }
 }

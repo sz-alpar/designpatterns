@@ -33,8 +33,15 @@ public class Room implements MapSite {
         }
     }
 
-    public final void initialize(final int roomNumber) {
-        this.roomNumber = roomNumber;
+    @NotNull
+    @Override
+    public MapSite copy() {
+        return new Room(this);
+    }
+
+    @Override
+    public void enter() {
+
     }
 
     public final int getRoomNumber() {
@@ -50,19 +57,12 @@ public class Room implements MapSite {
         return side;
     }
 
+    public final void initialize(final int roomNumber) {
+        this.roomNumber = roomNumber;
+    }
+
     public final void setSide(final Direction direction, final MapSite site) {
         sides.put(direction, site);
-    }
-
-    @Override
-    public void enter() {
-
-    }
-
-    @NotNull
-    @Override
-    public MapSite copy() {
-        return new Room(this);
     }
 
 }

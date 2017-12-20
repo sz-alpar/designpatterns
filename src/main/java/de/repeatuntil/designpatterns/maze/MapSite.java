@@ -7,9 +7,9 @@ import org.jetbrains.annotations.NotNull;
  */
 public interface MapSite {
 
-    @SuppressWarnings("EmptyMethod")
-    void enter();
-
     @NotNull
     MapSite copy();
+
+    @SuppressWarnings("EmptyMethod")
+    void enter();
 }

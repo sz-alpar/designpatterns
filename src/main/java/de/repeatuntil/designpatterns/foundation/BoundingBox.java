@@ -15,14 +15,11 @@ public final class BoundingBox {
         this.topRight = topRight;
     }
 
-    @NotNull
-    public Point getBottomLeft() {
-        return bottomLeft;
-    }
-
-    @NotNull
-    public Point getTopRight() {
-        return topRight;
+    @Override
+    public int hashCode() {
+        int result = bottomLeft.hashCode();
+        result = 31 * result + topRight.hashCode();
+        return result;
     }
 
     @Override
@@ -42,10 +39,13 @@ public final class BoundingBox {
         return topRight.equals(boundingBox.topRight);
     }
 
-    @Override
-    public int hashCode() {
-        int result = bottomLeft.hashCode();
-        result = 31 * result + topRight.hashCode();
-        return result;
+    @NotNull
+    public Point getBottomLeft() {
+        return bottomLeft;
+    }
+
+    @NotNull
+    public Point getTopRight() {
+        return topRight;
     }
 }

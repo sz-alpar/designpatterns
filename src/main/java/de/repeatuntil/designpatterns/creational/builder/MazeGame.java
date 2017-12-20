@@ -1,8 +1,9 @@
 package de.repeatuntil.designpatterns.creational.builder;
 
+import org.jetbrains.annotations.NotNull;
+
 import de.repeatuntil.designpatterns.maze.Direction;
 import de.repeatuntil.designpatterns.maze.Maze;
-import org.jetbrains.annotations.NotNull;
 
 /**
  * Created by Alpar Szotyori on 1/5/17.

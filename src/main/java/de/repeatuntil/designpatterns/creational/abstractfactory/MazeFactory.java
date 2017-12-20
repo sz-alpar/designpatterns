@@ -1,10 +1,11 @@
 package de.repeatuntil.designpatterns.creational.abstractfactory;
 
+import org.jetbrains.annotations.NotNull;
+
 import de.repeatuntil.designpatterns.maze.Door;
 import de.repeatuntil.designpatterns.maze.Maze;
 import de.repeatuntil.designpatterns.maze.Room;
 import de.repeatuntil.designpatterns.maze.Wall;
-import org.jetbrains.annotations.NotNull;
 
 /**
  * Created by Alpar Szotyori on 1/5/17.
@@ -12,13 +13,13 @@ import org.jetbrains.annotations.NotNull;
 public class MazeFactory {
 
     @NotNull
-    public Maze makeMaze() {
-        return new Maze();
+    public Door makeDoor(@NotNull final Room r1, @NotNull final Room r2) {
+        return new Door(r1, r2);
     }
 
     @NotNull
-    public Wall makeWall() {
-        return new Wall();
+    public Maze makeMaze() {
+        return new Maze();
     }
 
     @NotNull
@@ -27,7 +28,7 @@ public class MazeFactory {
     }
 
     @NotNull
-    public Door makeDoor(@NotNull final Room r1, @NotNull final Room r2) {
-        return new Door(r1, r2);
+    public Wall makeWall() {
+        return new Wall();
     }
 }

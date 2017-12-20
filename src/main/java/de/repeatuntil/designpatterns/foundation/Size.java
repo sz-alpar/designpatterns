@@ -6,21 +6,19 @@ package de.repeatuntil.designpatterns.foundation;
 public final class Size {
 
     public static final Size ZERO = new Size(0, 0);
-
-    private final float width;
     private final float height;
+    private final float width;
 
     public Size(final float width, final float height) {
         this.width = width;
         this.height = height;
     }
 
-    public float getWidth() {
-        return width;
-    }
-
-    public float getHeight() {
-        return height;
+    @Override
+    public int hashCode() {
+        int result = (width != +0.0f ? Float.floatToIntBits(width) : 0);
+        result = 31 * result + (height != +0.0f ? Float.floatToIntBits(height) : 0);
+        return result;
     }
 
     @Override
@@ -40,10 +38,11 @@ public final class Size {
         return Float.compare(size.height, height) == 0;
     }
 
-    @Override
-    public int hashCode() {
-        int result = (width != +0.0f ? Float.floatToIntBits(width) : 0);
-        result = 31 * result + (height != +0.0f ? Float.floatToIntBits(height) : 0);
-        return result;
+    public float getHeight() {
+        return height;
+    }
+
+    public float getWidth() {
+        return width;
     }
 }

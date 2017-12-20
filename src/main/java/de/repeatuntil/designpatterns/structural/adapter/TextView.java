@@ -1,25 +1,17 @@
 package de.repeatuntil.designpatterns.structural.adapter;
 
+import org.jetbrains.annotations.NotNull;
+
 import de.repeatuntil.designpatterns.foundation.Point;
 import de.repeatuntil.designpatterns.foundation.Size;
-import org.jetbrains.annotations.NotNull;
 
 /**
  * Created by aszotyori on 19/03/2017.
  */
 public class TextView {
 
-    private Point origin = Point.ZERO;
     private Size extent = Size.ZERO;
-
-    @NotNull
-    public final Point getOrigin() {
-        return origin;
-    }
-
-    public final void setOrigin(final Point origin) {
-        this.origin = origin;
-    }
+    private Point origin = Point.ZERO;
 
     @NotNull
     public final Size getExtent() {
@@ -28,6 +20,15 @@ public class TextView {
 
     public final void setExtent(final Size extent) {
         this.extent = extent;
+    }
+
+    @NotNull
+    public final Point getOrigin() {
+        return origin;
+    }
+
+    public final void setOrigin(final Point origin) {
+        this.origin = origin;
     }
 
     public final boolean isEmpty() {

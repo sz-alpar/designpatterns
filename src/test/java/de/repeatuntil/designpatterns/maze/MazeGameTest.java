@@ -1,8 +1,10 @@
 package de.repeatuntil.designpatterns.maze;
 
-import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
-import static org.junit.Assert.*;
+import org.junit.Test;
 
 /**
  * Created by Alpar Szotyori on 1/5/17.

@@ -1,11 +1,12 @@
 package de.repeatuntil.designpatterns.creational.factorymethod;
 
+import org.jetbrains.annotations.NotNull;
+
 import de.repeatuntil.designpatterns.creational.abstractfactory.DoorNeedingSpell;
 import de.repeatuntil.designpatterns.creational.abstractfactory.EnchantedRoom;
 import de.repeatuntil.designpatterns.creational.abstractfactory.Spell;
 import de.repeatuntil.designpatterns.maze.Door;
 import de.repeatuntil.designpatterns.maze.Room;
-import org.jetbrains.annotations.NotNull;
 
 /**
  * Created by Alpar Szotyori on 2/24/17.

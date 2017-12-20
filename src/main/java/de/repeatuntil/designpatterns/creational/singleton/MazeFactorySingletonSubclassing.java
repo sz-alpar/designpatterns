@@ -1,12 +1,13 @@
 package de.repeatuntil.designpatterns.creational.singleton;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.TestOnly;
+
 import de.repeatuntil.designpatterns.creational.abstractfactory.MazeFactory;
 import de.repeatuntil.designpatterns.maze.Door;
 import de.repeatuntil.designpatterns.maze.Maze;
 import de.repeatuntil.designpatterns.maze.Room;
 import de.repeatuntil.designpatterns.maze.Wall;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.TestOnly;
 
 /**
  * Created by Alpar Szotyori on 2/25/17.
@@ -18,6 +19,30 @@ public class MazeFactorySingletonSubclassing extends MazeFactory {
     static MazeFactorySingletonSubclassing INSTANCE = null;
 
     MazeFactorySingletonSubclassing() {
+    }
+
+    @Override
+    @NotNull
+    public Door makeDoor(@NotNull final Room r1, @NotNull final Room r2) {
+        return new Door(r1, r2);
+    }
+
+    @Override
+    @NotNull
+    public Maze makeMaze() {
+        return new Maze();
+    }
+
+    @Override
+    @NotNull
+    public Room makeRoom(final int roomNumber) {
+        return new Room(roomNumber);
+    }
+
+    @Override
+    @NotNull
+    public Wall makeWall() {
+        return new Wall();
     }
 
     @NotNull
@@ -34,29 +59,5 @@ public class MazeFactorySingletonSubclassing extends MazeFactory {
             }
         }
         return INSTANCE;
-    }
-
-    @Override
-    @NotNull
-    public Maze makeMaze() {
-        return new Maze();
-    }
-
-    @Override
-    @NotNull
-    public Wall makeWall() {
-        return new Wall();
-    }
-
-    @Override
-    @NotNull
-    public Room makeRoom(final int roomNumber) {
-        return new Room(roomNumber);
-    }
-
-    @Override
-    @NotNull
-    public Door makeDoor(@NotNull final Room r1, @NotNull final Room r2) {
-        return new Door(r1, r2);
     }
 }

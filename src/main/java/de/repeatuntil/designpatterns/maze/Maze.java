@@ -31,6 +31,10 @@ public final class Maze {
         this.rooms.put(room.getRoomNumber(), room);
     }
 
+    public Maze copy() {
+        return new Maze(this);
+    }
+
     @NotNull
     public Room getRoomWithNumber(final int roomNumber) {
         final Room room = rooms.get(roomNumber);
@@ -43,9 +47,5 @@ public final class Maze {
     @SuppressWarnings("unused")
     Map<Integer, Room> getRooms() {
         return rooms;
-    }
-
-    public Maze copy() {
-        return new Maze(this);
     }
 }
